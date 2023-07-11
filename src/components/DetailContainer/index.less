@@ -1,0 +1,43 @@
+.AMapContainer {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.licensePhoto {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
+}
+
+//组件ShowItem
+.ShowItem {
+  .title {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .value {
+    color: #000f;
+  }
+}
+
+.BlockItemContainer {
+  .BlockItemContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.BlockItemEchartsContainer {
+  display: grid;
+  grid-template-rows: 140px 140px;
+  grid-template-columns: 140px 140px;
+  justify-content: space-around;
+}

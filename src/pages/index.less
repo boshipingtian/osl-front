@@ -1,0 +1,50 @@
+//历史报警侧边栏
+.container {
+  display: flex;
+
+  .leftContainer {
+    position: relative;
+    width: 454px;
+    margin-right: 16px;
+    background-color: #fff;
+
+    .order {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 2px 16px 0 0;
+    }
+  }
+
+  .rightContainer {
+    position: relative;
+    width: calc(100% - 400px);
+    overflow: hidden;
+  }
+}
+
+//域控管理
+.domain {
+  display: flex;
+  justify-content: space-between;
+  margin: -24px -24px;
+
+  .leftContainer {
+    width: 208px;
+    height: calc(100vh - 48px);
+    background-color: #fff;
+  }
+
+  .rightContainer {
+    width: calc(100% - 208px);
+
+    .searchBarContainer {
+      height: 55px;
+      background-color: #fff;
+    }
+
+    .detialContainer {
+      padding: 16px;
+    }
+  }
+}

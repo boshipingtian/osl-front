@@ -1,0 +1,261 @@
+.dataScreenContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .dataScreenContainerImage {
+    position: absolute;
+    z-index: -100;
+  }
+}
+
+//大屏头部样式
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 56px;
+  color: rgb(162, 201, 254);
+  font-size: 28px;
+  text-align: center;
+}
+
+//面板卡片样式
+.PanelCardContainer {
+  position: relative;
+  //面板卡片背景图片
+  .PanelCardBackGroundImage {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+  }
+
+  //四个角的图片
+  .imgTopLeft {
+    position: absolute;
+  }
+
+  .imgTopRight {
+    position: absolute;
+    right: 0;
+  }
+
+  .imgBottomLeft {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .imgBottomRight {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  //内容
+  .content {
+    padding: 15px;
+
+    //卡片标题
+    .title {
+      position: relative;
+      margin-left: 5px;
+      color: white;
+      font-size: 16px;
+      //标题头装饰
+      &::before {
+        position: absolute;
+        top: 2px;
+        left: -8px;
+        width: 4px;
+        height: 18px;
+        background: #008aff;
+        border-radius: 5px;
+        content: '';
+      }
+    }
+
+    .context {
+      width: 100%;
+      padding: 10px 0 5px 0;
+    }
+
+    //布局
+    .NumberDataShowContent {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .NumberDataCharts {
+        width: inherit;
+      }
+    }
+  }
+}
+
+//主内容
+.mainContent {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-columns: 280px 1fr 280px;
+  width: 100vw;
+  height: calc(100% - 56px);
+  padding: 15px;
+
+  .mapData {
+    overflow: hidden;
+  }
+}
+
+//左布局
+.leftContent {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-rows: 2fr 5fr;
+}
+
+//右布局
+.rightContent {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-rows: 2fr 5fr;
+}
+
+// 单个的数字显示
+.NumberLight {
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  margin-right: 5px;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #108089;
+  box-shadow: 0 0 8px #085fb8 inset;
+}
+
+//一组数字展示带标题
+.NumberDataShow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .NumberDataShowTitle {
+    color: #29c6b2;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+//报警信息分页器
+.WarningPageChange {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+
+  .WarningPageChange {
+    display: flex;
+    align-items: center;
+
+    .WarningPageChangeText {
+      height: 20px;
+      color: #ccc;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+//报警卡片
+.WarningCard {
+  position: relative;
+  width: 100%;
+  height: 48px;
+
+  .WarningCardContext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: inherit;
+
+    > div {
+      display: flex;
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+
+  .WarningCardBackgroundImg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+//自定义modal内容
+.modalContent {
+  .ant-modal-content {
+    height: 100%;
+    overflow: hidden;
+
+    .ant-modal-body {
+      height: calc(100% - 55px);
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+//自定义modal标题
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: inherit;
+
+  .modalHeaderText {
+    font-size: 24px;
+  }
+}
+
+.MapContent {
+  position: relative;
+  width: 100%;
+  height: 152px;
+}
+
+//设备监控卡片
+.DeviceDataCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .leftContent {
+    display: flex;
+    flex-direction: column;
+
+    .context {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .moreInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+  .rightContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
