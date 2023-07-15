@@ -37,13 +37,6 @@ export default [
     name: 'data-overview',
     icon: 'dashboard',
     routes: [
-      // 数据统计
-      {
-        path: '/data-overview/data-statistics',
-        name: 'data-statistics',
-        icon: 'smile',
-        component: './dataOverview/DataStatistics',
-      },
       // 数据大屏
       {
         path: '/data-overview/data-screen',
@@ -51,10 +44,24 @@ export default [
         icon: 'smile',
         redirect: '/data-screen',
       },
+      // 数据统计
+      {
+        path: '/data-overview/data-statistics',
+        name: 'data-statistics',
+        icon: 'smile',
+        component: './dataOverview/DataStatistics',
+      },
       //运营管理
       {
         path: '/data-overview/operation-management',
         name: 'operation-management',
+        icon: 'smile',
+        component: './dataOverview/OperationManagement',
+      },
+      //账单管理
+      {
+        path: '/data-overview/bill-management',
+        name: 'bill-management',
         icon: 'smile',
         component: './dataOverview/OperationManagement',
       },
@@ -66,7 +73,7 @@ export default [
     name: 'platform-monitor',
     icon: 'smile',
     routes: [
-      // 企业监控
+      // 用户管理
       {
         path: '/platform-monitor/enterprise-monitor',
         name: 'enterprise-monitor',
@@ -105,6 +112,24 @@ export default [
             path: '/platform-monitor/enterprise-monitor/enterprise-device/detail',
             component: './platformMonitor/EnterpriseMonitor/EnterpriseDevice/detail',
           },
+          //审计列表
+          {
+            path: '/platform-monitor/enterprise-monitor/audit-enterprise',
+            name: 'audit-enterprise',
+            component: './platformMonitor/AuditMonitor',
+          },
+          //审计监控详情
+          {
+            path: '/platform-monitor/enterprise-monitor/audit-enterprise/detail',
+            component: './platformMonitor/AuditMonitor/detail',
+          },
+
+          //第三方磅主列表
+          {
+            path: '/platform-monitor/enterprise-monitor/pound-enterprise',
+            name: 'pound-enterprise',
+            component: './platformMonitor/EnterpriseMonitor/LogisticsEnterprise',
+          },
         ],
       },
       // 业务监控
@@ -137,7 +162,7 @@ export default [
           },
         ],
       },
-      // 运输管理
+      // 运力监控
       {
         path: '/platform-monitor/transportation-management',
         name: 'transportation-management',
@@ -164,18 +189,25 @@ export default [
             path: '/platform-monitor/transportation-management/vehicle/detail',
             component: './platformMonitor/TransportationManagement/Vehicle/detail',
           },
+          //运次列表
+          {
+            path: '/platform-monitor/transportation-management/transport',
+            name: 'transport',
+            component: './platformMonitor/TransportationManagement/Vehicle',
+          },
+          //磅单列表
+          {
+            path: '/platform-monitor/transportation-management/vehicle',
+            name: 'bound',
+            component: './platformMonitor/TransportationManagement/Vehicle',
+          },
         ],
       },
-      //审计监控
+      // 设备监控
       {
-        path: '/platform-monitor/audit-monitor',
-        name: 'audit-monitor',
-        component: './platformMonitor/AuditMonitor',
-      },
-      //审计监控详情
-      {
-        path: '/platform-monitor/audit-monitor/detail',
-        component: './platformMonitor/AuditMonitor/detail',
+        path: '/platform-monitor/device-management',
+        name: 'device-management',
+        component: './platformMonitor/TransportationManagement/Driver',
       },
     ],
   },
@@ -241,17 +273,17 @@ export default [
         ],
       },
       // 历史运输
-      {
-        path: '/history-data/history-transportation',
-        name: 'history-transportation',
-        component: './historyData/HistoryTransportation',
-      },
+      // {
+      //   path: '/history-data/history-transportation',
+      //   name: 'history-transportation',
+      //   component: './historyData/HistoryTransportation',
+      // },
 
       //运次
-      {
-        path: '/history-data/history-transportation/trans-times',
-        component: './platformMonitor/TransportationManagement/TransTimes',
-      },
+      // {
+      //   path: '/history-data/history-transportation/trans-times',
+      //   component: './platformMonitor/TransportationManagement/TransTimes',
+      // },
     ],
   },
   // 用户信息

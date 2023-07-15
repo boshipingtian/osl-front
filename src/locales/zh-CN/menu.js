@@ -55,21 +55,26 @@ export default {
   'menu.data-overview.data-screen': '数据大屏',
   'menu.data-overview.data-statistics': '数据统计',
   'menu.data-overview.operation-management': '运营管理',
+  'menu.data-overview.bill-management': '账单管理',
 
   'menu.platform-monitor': '平台监控',
-  'menu.platform-monitor.enterprise-monitor': '企业监控',
+  'menu.platform-monitor.enterprise-monitor': '用户管理',
   'menu.platform-monitor.enterprise-monitor.trading-enterprise': '买卖企业',
   'menu.platform-monitor.enterprise-monitor.logistics-enterprise': '物流企业',
+  'menu.platform-monitor.enterprise-monitor.audit-enterprise': '审计列表',
+  'menu.platform-monitor.enterprise-monitor.pound-enterprise': '第三方磅主列表',
 
   'menu.platform-monitor.business-monitor': '业务监控',
   'menu.platform-monitor.business-monitor.order': '订单',
   'menu.platform-monitor.business-monitor.waybill': '运单',
 
-  'menu.platform-monitor.transportation-management': '运输管理',
+  'menu.platform-monitor.transportation-management': '运力监控',
   'menu.platform-monitor.transportation-management.driver': '司机',
   'menu.platform-monitor.transportation-management.vehicle': '车辆',
+  'menu.platform-monitor.transportation-management.transport': '运次列表',
+  'menu.platform-monitor.transportation-management.bound': '磅单列表',
 
-  'menu.platform-monitor.audit-monitor': '审计监控',
+  'menu.platform-monitor.device-management': '设备监控',
 
   'menu.alarm-info': '报警信息',
   'menu.alarm-info.alarm-overview': '报警总览',
