@@ -5,6 +5,7 @@ import { addAudit, getAuditList } from '@/services/user/audit';
 import { message } from 'antd';
 import { AuditDetailColumns, AuditListSelectOption } from '@/services/TableColumes/platform';
 import AduitModal from '@/pages/platformMonitor/AuditMonitor/components/AduitModal';
+import fakeData from '@/pages/platformMonitor/AuditMonitor/fake';
 
 const Index = () => {
   const [page, setPage] = useState(1);
@@ -16,7 +17,8 @@ const Index = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(async () => {
-    await getAudit();
+    // await getAudit();
+    await setDataSource(fakeData.map((item) => ({ ...item, operate: '查看详情' })));
   }, [pageSize, page]);
 
   //接收分页参数

@@ -8,6 +8,7 @@ import {
 import { addLogistics, getLogisticsList } from '@/services/enterprise/logistics';
 import { message } from 'antd';
 import LogsticModel from '@/pages/platformMonitor/EnterpriseMonitor/LogisticsEnterprise/components/LogsticModel/LogsticModel';
+import fakeData from '@/pages/platformMonitor/EnterpriseMonitor/LogisticsEnterprise/fake.js';
 
 const Index = () => {
   const [dataSource, setDataSource] = useState([]);
@@ -21,7 +22,8 @@ const Index = () => {
   const [isEditVisible, setIsEditVisible] = useState(false);
 
   useEffect(async () => {
-    await LogisticList(page, pageSize, classify, keywords);
+    // await LogisticList(page, pageSize, classify, keywords);
+    await setDataSource(fakeData.map((item) => ({ ...item, operate: '查看详情' })));
   }, [page, pageSize, classify, keywords]);
 
   /**

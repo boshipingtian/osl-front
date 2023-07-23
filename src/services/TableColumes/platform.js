@@ -10,16 +10,6 @@ export const TradingEnterpriseColumn = [
     key: 'name',
   },
   {
-    title: '国家',
-    dataIndex: 'country',
-    key: 'country',
-  },
-  {
-    title: '地区',
-    dataIndex: 'address',
-    key: 'address',
-  },
-  {
     title: '负责人',
     dataIndex: 'holder',
     key: 'holder',
@@ -28,6 +18,21 @@ export const TradingEnterpriseColumn = [
     title: '联系方式',
     dataIndex: 'phone',
     key: 'phone',
+  },
+  {
+    title: '级别',
+    dataIndex: 'level',
+    key: 'level',
+  },
+  {
+    title: '国家',
+    dataIndex: 'country',
+    key: 'country',
+  },
+  {
+    title: '地区',
+    dataIndex: 'address',
+    key: 'address',
   },
   {
     title: '操作',
@@ -112,24 +117,9 @@ export const TradingEnterpriseColumnDetail = [
 //物流企业列表的表头
 export const LogisticsEnterpriseColumns = [
   {
-    title: 'id',
-    dataIndex: 'id',
-    key: 'id',
-  },
-  {
     title: '企业名称',
     dataIndex: 'name',
     key: 'name',
-  },
-  {
-    title: '国家',
-    dataIndex: 'country',
-    key: 'country',
-  },
-  {
-    title: '地区',
-    dataIndex: 'address',
-    key: 'address',
   },
   {
     title: '负责人',
@@ -140,6 +130,21 @@ export const LogisticsEnterpriseColumns = [
     title: '联系方式',
     dataIndex: 'phone',
     key: 'phone',
+  },
+  {
+    title: '级别',
+    dataIndex: 'level',
+    key: 'level',
+  },
+  {
+    title: '国家',
+    dataIndex: 'country',
+    key: 'country',
+  },
+  {
+    title: '地区',
+    dataIndex: 'address',
+    key: 'address',
   },
   {
     title: '操作',
@@ -740,6 +745,11 @@ export const AuditDetailColumns = [
     key: 'name',
   },
   {
+    title: '类型',
+    dataIndex: 'type',
+    key: 'type',
+  },
+  {
     title: '级别',
     dataIndex: 'rank',
     key: 'rank',
@@ -750,17 +760,12 @@ export const AuditDetailColumns = [
     key: 'limits',
   },
   {
-    title: '性质',
-    dataIndex: 'administration',
-    key: 'administration',
+    title: '责任人',
+    dataIndex: 'holder',
+    key: 'holder',
   },
   {
-    title: '管理员',
-    dataIndex: 'createTime',
-    key: 'createTime',
-  },
-  {
-    title: '联系方式',
+    title: '责任人联系方式',
     dataIndex: 'holderMobile',
     key: 'holderMobile',
   },
