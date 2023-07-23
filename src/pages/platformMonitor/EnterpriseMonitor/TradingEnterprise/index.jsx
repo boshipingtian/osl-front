@@ -9,6 +9,7 @@ import {
 } from '@/services/TableColumes/platform';
 import EnterpriseModal from '@/pages/platformMonitor/EnterpriseMonitor/TradingEnterprise/components/enterpriseModal';
 import OrderCommonModal from '@/components/Modal/OrderCommonModal/OrderCommonModal';
+import fakeData from '@/pages/platformMonitor/EnterpriseMonitor/TradingEnterprise/fake';
 
 const Index = () => {
   /**
@@ -24,7 +25,7 @@ const Index = () => {
   /**
    * 列表数据
    */
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [datasource, setDatasource] = useState([]);
   const [total, setTotal] = useState(0);
   /**
@@ -45,6 +46,7 @@ const Index = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     // await getData();
+    await setDatasource(fakeData.map((item) => ({ ...item, operate: '查看详情' })));
   }, [name, phone, address, holder, country, currentPage, pageSize]);
 
   //获取企业列表
